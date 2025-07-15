@@ -1,42 +1,52 @@
-import { Camera, Heart, Music, BookOpen, Coffee, Palette } from 'lucide-react';
+import { Camera, Heart, BookOpen, Coffee, Palette, Dumbbell } from 'lucide-react';
 
 const Misc = () => {
   const hobbies = [
     {
-      title: "Photography",
-      description: "I love capturing moments and exploring different perspectives through the lens. From street photography to nature shots, I enjoy experimenting with composition and lighting.",
-      icon: <Camera size={24} />,
-      color: "var(--primary-color)"
-    },
-    {
-      title: "Music",
-      description: "A passionate listener and occasional musician. I enjoy exploring different genres and finding new artists that inspire creativity and innovation.",
-      icon: <Music size={24} />,
+      title: "Gym",
+      description: "Staying active and challenging myself physically is a big part of my routine. I love weightlifting and pushing my limits.",
+      icon: <Dumbbell size={24} />, // Use a dumbbell icon for gym
       color: "var(--secondary-color)"
     },
     {
-      title: "Reading",
-      description: "Always eager to learn and explore new ideas. I enjoy both technical books and fiction that challenge my perspective and expand my worldview.",
-      icon: <BookOpen size={24} />,
-      color: "var(--accent-color)"
-    },
-    {
-      title: "Art & Design",
-      description: "Exploring digital art and design as a way to express creativity. I enjoy experimenting with different styles and techniques.",
-      icon: <Palette size={24} />,
+      title: "Baking",
+      description: "Experimenting with new recipes and baking treats is my favorite way to relax and share joy with friends and family.",
+      icon: <BookOpen size={24} />, // Use BookOpen as a neutral icon for baking
       color: "var(--primary-color)"
     },
+    
+   
+   
+  ];
+
+  const favoriteFilms = [
     {
-      title: "Coffee",
-      description: "A coffee enthusiast who appreciates the art of brewing and the ritual of enjoying a good cup. Always on the lookout for new coffee shops and beans.",
-      icon: <Coffee size={24} />,
-      color: "var(--primary-color)"
+      title: "Harakiri",
+      year: 1962,
+      director: "Masaki Kobayashi",
+      description: "A devastating critique of samurai honor and tradition, told with haunting beauty.",
+      letterboxd: "https://letterboxd.com/film/harakiri/"
     },
     {
-      title: "Travel",
-      description: "Exploring new places and cultures helps me gain fresh perspectives and inspiration for my work. Every journey brings new ideas and connections.",
-      icon: <Heart size={24} />,
-      color: "var(--secondary-color)"
+      title: "La Haine",
+      year: 1995,
+      director: "Mathieu Kassovitz",
+      description: "A raw, urgent look at youth and unrest in the Parisian suburbs.",
+      letterboxd: "https://letterboxd.com/film/la-haine/"
+    },
+    {
+      title: "In the Mood for Love",
+      year: 2000,
+      director: "Wong Kar-wai",
+      description: "A visually stunning, poetic meditation on longing and missed connections.",
+      letterboxd: "https://letterboxd.com/film/in-the-mood-for-love/"
+    },
+    {
+      title: "Lion of the Desert",
+      year: 1981,
+      director: "Moustapha Akkad",
+      description: "An epic story of resistance and dignity in the face of colonial oppression.",
+      letterboxd: "https://letterboxd.com/film/lion-of-the-desert/"
     }
   ];
 
@@ -74,102 +84,48 @@ const Misc = () => {
   ];
 
   return (
-    <div className="page">
-      <h1 className="page-title">Misc</h1>
-
-      <div className="content-section">
-        <h2>Beyond Code</h2>
-        <p>
-          While technology is my primary passion, I believe in maintaining a well-rounded life. 
-          Here are some of the things that inspire me and keep me creative outside of programming.
-        </p>
-      </div>
-
-      <div className="project-grid">
-        {hobbies.map((hobby) => (
-          <div key={hobby.title} className="project-card">
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
-              <div style={{ color: hobby.color, marginRight: '0.5rem' }}>
-                {hobby.icon}
-              </div>
-              <h3>{hobby.title}</h3>
-            </div>
-            
-            <p>{hobby.description}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="content-section">
-        <h2>Photography Gallery</h2>
-        <p>
-          Photography is one of my favorite creative outlets. Here are some of my favorite shots 
-          and the stories behind them. Each image represents a moment of inspiration or discovery.
-        </p>
-      </div>
-
-      <div className="project-grid">
-        {photoGallery.map((photo) => (
-          <div key={photo.title} className="project-card">
-            <div style={{ 
-              height: '200px', 
-              background: 'var(--card-bg)',
-              borderRadius: '8px',
-              marginBottom: '1rem',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              border: '1px solid var(--border-color)'
-            }}>
-              <Camera size={48} style={{ color: 'var(--primary-color)', opacity: 0.5 }} />
-            </div>
-            
-            <h3>{photo.title}</h3>
-            <p style={{ marginBottom: '0.5rem' }}>
-              {photo.description}
-            </p>
-            
-            <span style={{ 
-              background: 'rgba(255, 105, 180, 0.1)',
-              color: 'var(--primary-color)',
-              padding: '0.25rem 0.5rem',
-              borderRadius: '4px',
-              fontSize: '0.8rem',
-              border: '1px solid rgba(255, 105, 180, 0.3)'
-            }}>
-              {photo.category}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      <div className="content-section">
-        <h2>Currently Reading</h2>
-        <div style={{ display: 'grid', gap: '1rem', marginTop: '1rem' }}>
-          <div className="project-card" style={{ margin: 0 }}>
-            <h3>"Designing Data-Intensive Applications" by Martin Kleppmann</h3>
-            <p>
-              Exploring the principles behind reliable, scalable, and maintainable applications.
-            </p>
-          </div>
-          
-          <div className="project-card" style={{ margin: 0 }}>
-            <h3>"The Pragmatic Programmer" by Andrew Hunt and David Thomas</h3>
-            <p>
-              A classic guide to becoming a more effective and productive programmer.
-            </p>
-          </div>
+    <div className="page" style={{ minHeight: '100vh', padding: 0, background: 'var(--bg-color)' }}>
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 2rem 2rem 2rem' }}>
+        <h1 style={{ fontFamily: 'Fira Mono, monospace', fontWeight: 700, fontSize: '2.5rem', color: 'var(--primary-color)', marginBottom: '2.5rem', letterSpacing: '-1px' }}>
+          Miscellaneous
+        </h1>
+        <div style={{ marginBottom: '2.5rem' }}>
+          <h2 style={{ fontFamily: 'Fira Mono, monospace', fontWeight: 600, fontSize: '1.5rem', color: 'var(--accent-color)', marginBottom: '1.5rem' }}>Favorite Films</h2>
+          <p style={{ color: 'var(--text-muted)', fontFamily: 'Fira Mono, monospace', fontSize: '1.1rem', marginBottom: '1.2rem' }}>
+            I love cinema and am always inspired by powerful storytelling and beautiful visuals. Some of my all-time favorite films are:
+          </p>
+          <ul style={{ color: 'var(--primary-color)', fontSize: '1.1rem', fontFamily: 'Fira Mono, monospace', paddingLeft: '1.5rem', marginBottom: '2rem', listStyle: 'disc' }}>
+            {favoriteFilms.map((film) => (
+              <li key={film.title} style={{ marginBottom: '1.1rem' }}>
+                <b>
+                  <a
+                    href={film.letterboxd}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--primary-color)', textDecoration: 'underline dotted', transition: 'color 0.2s' }}
+                  >
+                    {film.title}
+                  </a>
+                </b>{' '}
+                <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>
+                  ({film.year}, {film.director})
+                </span>
+                <br />
+                <span style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>{film.description}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-
-      <div className="content-section">
-        <h2>Get in Touch</h2>
-        <p>
-          I'm always interested in connecting with like-minded people who share similar passions. 
-          Whether it's discussing technology, sharing photography tips, or just having a good conversation, 
-          feel free to reach out!
-        </p>
-      </div>
+       
+    
+        
+        <div style={{ marginBottom: '2.5rem' }}>
+          <h2 style={{ fontFamily: 'Fira Mono, monospace', fontWeight: 600, fontSize: '1.5rem', color: 'var(--accent-color)', marginBottom: '1.5rem' }}>Get in Touch</h2>
+          <p style={{ color: 'var(--text-muted)', fontFamily: 'Fira Mono, monospace', fontSize: '1.1rem', marginBottom: 0 }}>
+            I'm always interested in connecting with like-minded people who share similar passions. Whether it's discussing technology, sharing photography tips, or just having a good conversation, feel free to reach out!
+          </p>
+        </div>
+      </section>
     </div>
   );
 };

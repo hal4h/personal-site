@@ -1,8 +1,20 @@
+import { useState } from 'react';
 import { ExternalLink, Github, Code, Database, Cpu, Smartphone, Globe, Brain } from 'lucide-react';
 
 const Projects = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   const projects = [
     // Full Stack Projects
+    {
+      title: "Pomoverse: Your Study Companion",
+      description: "Developed a full-stack productivity app with real-time database sync, task management, dynamic theming, and Spotify integration, reaching over 650+ unique users. Won DevHacks Fan's Choice Award and Best UI Award among 100+ projects for innovative UX, responsive design, and user engagement features.",
+      technologies: ["React", "Supabase", "PostgreSQL", "Vite", "Real-time Sync", "Spotify API"],
+      github: "https://github.com/yourusername/pomoverse",
+      live: "https://pomoverse.com",
+      category: "Full Stack",
+      icon: <Globe size={24} />
+    },
     {
       title: "Week at A Glance",
       description: "Android application developed with Java and Android Studio. Collaborated with a team using Agile methodologies, implementing 12 features with CI/CD pipelines, feature branches, and peer reviews.",
@@ -105,8 +117,7 @@ const Projects = () => {
       title: "Arctic Climate Analysis",
       description: "Analysis of minimum temperatures (1950–2020) at 34 Arctic weather stations using Python. Applied Kendall-Theil trend analysis and published findings in Atmosphere-Ocean Journal.",
       technologies: ["Python", "Data Analysis", "Climate Science", "Statistical Analysis"],
-      github: "https://github.com/yourusername/arctic-climate",
-      live: null,
+      live: "https://www.tandfonline.com/doi/full/10.1080/07055900.2021.1915238#references-Section",
       category: "Research",
       icon: <Brain size={24} />
     },
@@ -125,134 +136,110 @@ const Projects = () => {
 
   const categories = ["All", "Full Stack", "Low Level", "Backend", "Database", "Research", "In Progress"];
 
+  const filteredProjects = selectedCategory === "All" 
+    ? projects 
+    : projects.filter(project => project.category === selectedCategory);
+
   return (
-    <div className="page">
-      <h1 className="page-title">Projects</h1>
-
-      <div className="content-section">
-        <h2>Featured Work</h2>
-        <p>
-          Here are some of the projects I've worked on, spanning from low-level systems programming 
-          to full-stack applications. Each project represents different aspects of my technical skills 
-          and problem-solving approach.
-        </p>
-      </div>
-
-      <div className="project-grid">
-        {projects.map((project) => (
-          <div key={project.title} className="project-card">
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
-              <div style={{ color: 'var(--primary-color)', marginRight: '0.5rem' }}>
-                {project.icon}
-              </div>
-              <h3>{project.title}</h3>
-            </div>
-            
-            <p>{project.description}</p>
-            
-            <div style={{ marginBottom: '1rem' }}>
-              <span style={{ 
-                background: project.category === 'In Progress' ? 'var(--secondary-color)' : 'var(--primary-color)', 
-                color: 'var(--bg-color)', 
-                padding: '0.25rem 0.5rem', 
-                borderRadius: '4px', 
-                fontSize: '0.8rem',
-                fontWeight: '500'
-              }}>
-                {project.category}
-              </span>
-            </div>
-            
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-              {project.technologies.map((tech) => (
-                <span
-                  key={tech}
-                  style={{
-                    background: 'rgba(255, 105, 180, 0.1)',
-                    color: 'var(--primary-color)',
-                    padding: '0.25rem 0.5rem',
-                    borderRadius: '4px',
-                    fontSize: '0.8rem',
-                    border: '1px solid rgba(255, 105, 180, 0.3)'
-                  }}
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            
-            <div style={{ display: 'flex', gap: '1rem' }}>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-                style={{ fontSize: '0.8rem', padding: '0.5rem 1rem' }}
+    <div className="page" style={{ minHeight: '100vh', padding: 0, background: 'var(--bg-color)' }}>
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 2rem 2rem 2rem' }}>
+        <h1 style={{ fontFamily: 'Fira Mono, monospace', fontWeight: 700, fontSize: '2.5rem', color: 'var(--primary-color)', marginBottom: '2.5rem', letterSpacing: '-1px' }}>
+          Projects
+        </h1>
+        <div style={{ marginBottom: '2.5rem' }}>
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                style={{
+                  background: selectedCategory === category ? 'var(--primary-color)' : 'transparent',
+                  color: selectedCategory === category ? 'var(--bg-color)' : 'var(--primary-color)',
+                  border: `1.5px solid var(--primary-color)`,
+                  padding: '0.5rem 1.2rem',
+                  borderRadius: '999px',
+                  fontFamily: 'Fira Mono, monospace',
+                  fontWeight: 500,
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  outline: 'none',
+                  transition: 'all 0.2s',
+                  boxShadow: selectedCategory === category ? '0 2px 12px 0 var(--primary-color)' : 'none',
+                }}
               >
-                <Github size={14} style={{ marginRight: '0.25rem' }} />
-                Code
-              </a>
-              {project.live && (
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '2.5rem',
+        }}>
+          {filteredProjects.map((project) => (
+            <div key={project.title} style={{
+              background: 'none',
+              border: 'none',
+              borderRadius: 0,
+              boxShadow: 'none',
+              padding: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              minHeight: 0,
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+                <span style={{ color: 'var(--primary-color)', marginRight: '0.75rem', fontSize: 24 }}>
+                  {project.icon}
+                </span>
+                <h2 style={{ fontFamily: 'Fira Mono, monospace', fontWeight: 600, fontSize: '1.3rem', color: 'var(--text-color)', margin: 0 }}>{project.title}</h2>
+              </div>
+              <p style={{ color: 'var(--text-muted)', fontFamily: 'Fira Mono, monospace', fontSize: '1rem', marginBottom: '1rem', marginTop: 0 }}>{project.description}</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
+                {project.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    style={{
+                      background: 'var(--secondary-color)',
+                      color: 'var(--bg-color)',
+                      padding: '0.2rem 0.7rem',
+                      borderRadius: '999px',
+                      fontSize: '0.9rem',
+                      fontFamily: 'Fira Mono, monospace',
+                      fontWeight: 500,
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div style={{ display: 'flex', gap: '1rem' }}>
                 <a
-                  href={project.live}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn"
-                  style={{ fontSize: '0.8rem', padding: '0.5rem 1rem' }}
+                  aria-label="GitHub"
+                  style={{ color: 'var(--primary-color)', fontSize: 20, textDecoration: 'underline', fontFamily: 'Fira Mono, monospace' }}
                 >
-                  <ExternalLink size={14} style={{ marginRight: '0.25rem' }} />
-                  Live
+                  <Github size={18} style={{ marginRight: '0.3rem' }} />Code
                 </a>
-              )}
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Live Demo"
+                    style={{ color: 'var(--accent-color)', fontSize: 20, textDecoration: 'underline', fontFamily: 'Fira Mono, monospace' }}
+                  >
+                    <ExternalLink size={18} style={{ marginRight: '0.3rem' }} />Live
+                  </a>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="content-section">
-        <h2>Project Categories</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
-          <div className="skill-category">
-            <h3>Full Stack</h3>
-            <p>Complete applications with frontend and backend components</p>
-          </div>
-          <div className="skill-category">
-            <h3>Low Level</h3>
-            <p>Systems programming, drivers, and computer architecture projects</p>
-          </div>
-          <div className="skill-category">
-            <h3>Backend</h3>
-            <p>Server-side applications and distributed systems</p>
-          </div>
-          <div className="skill-category">
-            <h3>Database</h3>
-            <p>Data analysis, SQL applications, and database design</p>
-          </div>
-          <div className="skill-category">
-            <h3>Research</h3>
-            <p>Academic research and published scientific work</p>
-          </div>
-          <div className="skill-category">
-            <h3>In Progress</h3>
-            <p>Currently developing and actively working on</p>
-          </div>
+          ))}
         </div>
-      </div>
-
-      <div className="content-section">
-        <h2>More Projects</h2>
-        <p>
-          I'm constantly working on new projects and learning new technologies. 
-          Check out my GitHub profile for more of my work, or feel free to reach out 
-          if you'd like to collaborate on something interesting!
-        </p>
-        <div className="contact-links">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="btn">
-            <Github size={16} style={{ marginRight: '0.5rem' }} />
-            View All Projects
-          </a>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
