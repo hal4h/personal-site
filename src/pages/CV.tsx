@@ -42,6 +42,8 @@ const Experience = () => {
             </div>
           </div>
 
+          
+
           {/* Education */}
           <div>
             <h3>Education</h3>
@@ -224,43 +226,35 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Notable Projects */}
-          <div>
+         {/* Notable Projects */}
+         <div>
             <h3>Notable Projects</h3>
-            
-            <div className="project-card" style={{ margin: 0, marginBottom: '1rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                <h3 style={{ color: 'var(--text-color)' }}>Pomoverse: Your Study Companion</h3>
-                <a href="https://github.com/hal4h/pomoverse" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
-                  <ExternalLink size={14} />
-                </a>
+            <div className="project-card" style={{ margin: 0, marginBottom: '1.2rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '0.5rem' }}>
+                <span style={{ fontWeight: 600, color: 'var(--primary-color)' }}>Pomoverse: Your Study Companion</span>
+                <a href="https://github.com/yourusername/pomoverse" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)' }}><Github size={18} /></a>
+                <a href="https://pomo-verse.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Live Demo" style={{ color: 'var(--primary-color)' }}><ExternalLink size={18} /></a>
               </div>
-              <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                Developed a full-stack productivity app with real-time database sync, task management, dynamic theming, and Spotify integration, reaching over 650+ unique users. Won DevHacks Fan's Choice Award and Best UI Award among 100+ projects.
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', marginBottom: 0 }}>
+                Full-stack productivity app with real-time sync, task management, dynamic theming, and Spotify integration. 650+ users. Won DevHacks Fan's Choice and Best UI Awards for innovative UX and engagement.
               </p>
             </div>
-
-            <div className="project-card" style={{ margin: 0, marginBottom: '1rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                <h3 style={{ color: 'var(--text-color)' }}>5-Stage Pipeline Simulator</h3>
-                <a href="https://github.com/hal4h/pipeline-simulator" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
-                  <ExternalLink size={14} />
-                </a>
+            <div className="project-card" style={{ margin: 0, marginBottom: '1.2rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '0.5rem' }}>
+                <span style={{ fontWeight: 600, color: 'var(--primary-color)' }}>Arctic Climate Analysis (Published Research)</span>
+                <a href="https://www.tandfonline.com/doi/full/10.1080/07055900.2021.1915238#references-Section" target="_blank" rel="noopener noreferrer" aria-label="Publication" style={{ color: 'var(--primary-color)' }}><ExternalLink size={18} /></a>
               </div>
-              <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                LC3 assembly language pipeline simulator in C implementing a 5-stage pipeline (Fetch, Decode, Execute, Memory, Writeback) for educational purposes.
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', marginBottom: 0 }}>
+                Analysis of minimum temperatures (1950–2020) at 34 Arctic weather stations using Python. Applied Kendall-Theil trend analysis and published findings in Atmosphere-Ocean Journal.
               </p>
             </div>
-
             <div className="project-card" style={{ margin: 0 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                <h3 style={{ color: 'var(--text-color)' }}>Blockchain Peer and Miner</h3>
-                <a href="https://github.com/hal4h/blockchain-miner" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>
-                  <ExternalLink size={14} />
-                </a>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '0.5rem' }}>
+                <span style={{ fontWeight: 600, color: 'var(--primary-color)' }}>NBA Data CLI Application</span>
+                <a href="https://github.com/yourusername/3380-project" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)' }}><Github size={18} /></a>
               </div>
-              <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                Multi-threaded blockchain miner implementing Proof of Work algorithm with optimized hashing operations using SHA-256 and high-throughput performance across CPU cores.
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', marginBottom: 0 }}>
+                Command-line interface for NBA data analysis with 30+ complex SQL queries. Provides comprehensive basketball statistics and analytics.
               </p>
             </div>
           </div>

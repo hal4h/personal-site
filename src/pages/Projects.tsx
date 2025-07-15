@@ -123,10 +123,19 @@ const Projects = () => {
       icon: <Brain size={24} />
     },
 
-    
+    // Game Development Projects
+    {
+      title: "Ocean Odyssey (Ubisoft)",
+      description: "Developed a 3D infinite scroller game in C++ as part of Ubisoft's Game Lab program. Leveraged the Ubisoft API to implement custom pathfinding AI, advanced collision detection, and physics-based interactions. Designed and optimized the game loop to maintain a consistent 60 FPS across multiple platforms. The project features dynamic level generation, visually engaging environments, and a robust architecture for scalable gameplay mechanics. Demonstrated strong C++ skills, game engine architecture, and a passion for creative problem-solving in game development.",
+      technologies: ["C++", "C", "Ubisoft API", "Game Physics", "AI", "Game Design"],
+      github: "https://github.com/hal4h/Ocean-Odessy--Ubisoft",
+      live: null,
+      category: "Game Development",
+      icon: <Cpu size={24} />
+    },
   ];
 
-  const categories = ["All", "Full Stack", "Low Level", "Backend", "Database", "Research", "In Progress"];
+  const categories = ["All", "Full Stack", "Low Level", "Backend", "Database", "Game Development", "Research", "In Progress"];
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
