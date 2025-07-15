@@ -5,12 +5,22 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const projects = [
+    // In Progress Project
+    {
+      title: "Sentivest- NewsTrader AI engine",
+      description: "AI-driven platform analyzing real-time stock sentiment using FinBERT, GPT-4, and social/news data. Provides correlation to price movements and behavioral trend alerts.",
+      technologies: ["Python", "AI/ML", "FinBERT", "GPT-4", "Financial Analysis", "Real-time Data"],
+      github: "https://github.com/hal4h/Sentivest",
+      live: null,
+      category: "In Progress",
+      icon: <Brain size={24} />
+    },
     // Full Stack Projects
     {
       title: "Pomoverse: Your Study Companion",
       description: "Developed a full-stack productivity app with real-time database sync, task management, dynamic theming, and Spotify integration, reaching over 650+ unique users. Won DevHacks Fan's Choice Award and Best UI Award among 100+ projects for innovative UX, responsive design, and user engagement features.",
       technologies: ["React", "Supabase", "PostgreSQL", "Vite", "Real-time Sync", "Spotify API"],
-      github: "https://github.com/yourusername/pomoverse",
+      github: "https://github.com/hal4h/pomodoro-site",
       live: "https://pomoverse.com",
       category: "Full Stack",
       icon: <Globe size={24} />
@@ -19,8 +29,7 @@ const Projects = () => {
       title: "Week at A Glance",
       description: "Android application developed with Java and Android Studio. Collaborated with a team using Agile methodologies, implementing 12 features with CI/CD pipelines, feature branches, and peer reviews.",
       technologies: ["Java", "Android Studio", "Zoom API", "GitLab", "Agile", "CI/CD"],
-      github: "https://github.com/yourusername/week-at-a-glance",
-      live: null,
+
       category: "Full Stack",
       icon: <Smartphone size={24} />
     },
@@ -28,8 +37,7 @@ const Projects = () => {
       title: "Discord'nt",
       description: "Real-time chat application with REST API for seamless client-server communication and distributed system simulation. Implemented efficient HTTP requests and robust backend architecture.",
       technologies: ["JavaScript", "HTML", "REST API", "JSON", "XMLHttpRequest"],
-      github: "https://github.com/yourusername/discord-nt",
-      live: "https://discord-nt-demo.com",
+
       category: "Full Stack",
       icon: <Globe size={24} />
     },
@@ -39,8 +47,7 @@ const Projects = () => {
       title: "5-Stage Pipeline Simulator",
       description: "LC3 assembly language pipeline simulator in C. Implements a 5-stage pipeline (Fetch, Decode, Execute, Memory, Writeback) for educational purposes.",
       technologies: ["C", "Assembly", "LC3", "Computer Architecture"],
-      github: "https://github.com/yourusername/pipeline-simulator",
-      live: null,
+
       category: "Low Level",
       icon: <Cpu size={24} />
     },
@@ -48,8 +55,7 @@ const Projects = () => {
       title: "L2, L1 Cache Simulator & Analyzer",
       description: "Comprehensive cache simulator in C that analyzes L1 and L2 cache performance. Implements different cache policies and provides detailed performance metrics.",
       technologies: ["C", "Cache Architecture", "Performance Analysis", "Memory Management"],
-      github: "https://github.com/yourusername/cache-simulator",
-      live: null,
+  
       category: "Low Level",
       icon: <Cpu size={24} />
     },
@@ -57,8 +63,7 @@ const Projects = () => {
       title: "DMA Device Driver",
       description: "Direct Memory Access device driver in C for hard drive read/write operations. Implements efficient data transfer mechanisms and interrupt handling.",
       technologies: ["C", "Device Drivers", "DMA", "Hardware Interface", "Interrupts"],
-      github: "https://github.com/yourusername/dma-driver",
-      live: null,
+   
       category: "Low Level",
       icon: <Cpu size={24} />
     },
@@ -66,8 +71,7 @@ const Projects = () => {
       title: "Round Robin Scheduler",
       description: "CPU scheduler implementation in C with configurable time quantum. Analyzes performance metrics and optimal time slice determination.",
       technologies: ["C", "Operating Systems", "Scheduling Algorithms", "Performance Analysis"],
-      github: "https://github.com/yourusername/round-robin-scheduler",
-      live: null,
+
       category: "Low Level",
       icon: <Cpu size={24} />
     },
@@ -75,8 +79,7 @@ const Projects = () => {
       title: "5-Level File Management System (ATFS)",
       description: "Advanced file system implementation in C with 5-level directory structure. Implements file operations, directory management, and data persistence.",
       technologies: ["C", "File Systems", "Data Structures", "Storage Management"],
-      github: "https://github.com/yourusername/atfs",
-      live: null,
+
       category: "Low Level",
       icon: <Database size={24} />
     },
@@ -84,8 +87,7 @@ const Projects = () => {
       title: "Multi-threaded Prime Factorization",
       description: "Performance analysis of multi-threaded prime factorization in C. Evaluates optimal thread count, ordering effects, and locking mechanisms.",
       technologies: ["C", "Multi-threading", "Performance Analysis", "Algorithms"],
-      github: "https://github.com/yourusername/prime-factorization",
-      live: null,
+
       category: "Low Level",
       icon: <Cpu size={24} />
     },
@@ -95,8 +97,7 @@ const Projects = () => {
       title: "Blockchain Peer and Miner",
       description: "Multi-threaded blockchain miner implementing Proof of Work algorithm. Optimized hashing operations using SHA-256 with high-throughput performance across CPU cores.",
       technologies: ["Python", "Blockchain", "SHA-256", "Multi-threading", "Cryptography"],
-      github: "https://github.com/yourusername/blockchain-miner",
-      live: null,
+
       category: "Backend",
       icon: <Code size={24} />
     },
@@ -106,7 +107,7 @@ const Projects = () => {
       title: "NBA Data CLI Application",
       description: "Command-line interface application for NBA data analysis with 30+ complex SQL queries. Provides comprehensive basketball statistics and analytics.",
       technologies: ["Java", "SQL", "CLI", "Data Analysis", "Database Design"],
-      github: "https://github.com/yourusername/nba-cli",
+      github: "https://github.com/hal4h/3380-project",
       live: null,
       category: "Database",
       icon: <Database size={24} />
@@ -122,16 +123,7 @@ const Projects = () => {
       icon: <Brain size={24} />
     },
 
-    // In Progress Project
-    {
-      title: "SignalLens",
-      description: "AI-driven platform analyzing real-time stock sentiment using FinBERT, GPT-4, and social/news data. Provides correlation to price movements and behavioral trend alerts.",
-      technologies: ["Python", "AI/ML", "FinBERT", "GPT-4", "Financial Analysis", "Real-time Data"],
-      github: "https://github.com/yourusername/signallens",
-      live: null,
-      category: "In Progress",
-      icon: <Brain size={24} />
-    }
+    
   ];
 
   const categories = ["All", "Full Stack", "Low Level", "Backend", "Database", "Research", "In Progress"];
@@ -214,27 +206,17 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  style={{ color: 'var(--primary-color)', fontSize: 20, textDecoration: 'underline', fontFamily: 'Fira Mono, monospace' }}
-                >
-                  <Github size={18} style={{ marginRight: '0.3rem' }} />Code
-                </a>
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Live Demo"
-                    style={{ color: 'var(--accent-color)', fontSize: 20, textDecoration: 'underline', fontFamily: 'Fira Mono, monospace' }}
-                  >
-                    <ExternalLink size={18} style={{ marginRight: '0.3rem' }} />Live
+              <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'center', marginTop: '0.5rem' }}>
+                {project.github ? (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)', fontSize: 22 }}>
+                    <Github />
                   </a>
-                )}
+                ) : null}
+                {project.live ? (
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" aria-label="Live Demo" style={{ color: 'var(--primary-color)', fontSize: 22 }}>
+                    <ExternalLink />
+                  </a>
+                ) : null}
               </div>
             </div>
           ))}

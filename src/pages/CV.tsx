@@ -1,14 +1,14 @@
 import { Download, Calendar, ExternalLink, Phone, Mail, Linkedin, Github } from 'lucide-react';
 
-const CV = () => {
+const Experience = () => {
   return (
     <div className="page">
-      <h1 className="page-title">CV</h1>
+      <h1 className="page-title">Experience</h1>
 
       <div className="content-section">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
           <h2>Resume</h2>
-          <a href="/resume.pdf" download className="btn">
+          <a href="/halah_resume.pdf" download className="btn">
             <Download size={16} style={{ marginRight: '0.5rem' }} />
             Download PDF
           </a>
@@ -16,21 +16,25 @@ const CV = () => {
         
         <div style={{ display: 'grid', gap: '2rem' }}>
           {/* Contact Information */}
-          <div>
-            <h3>Contact Information</h3>
-            <div className="project-card" style={{ margin: 0 }}>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+            <h3 style={{ textAlign: 'center', marginBottom: '1.2rem' }}>Contact Information</h3>
+            <div className="project-card" style={{ margin: 0, display: 'flex', justifyContent: 'center', width: '100%' }}>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                gap: '1.2rem',
+                justifyItems: 'center',
+                width: '100%'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
                   <Mail size={16} color="var(--primary-color)" />
                   <span>halahmhanni4@icloud.com</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
                   <Linkedin size={16} color="var(--primary-color)" />
                   <span>linkedin.com/halah-mhanni</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
                   <Github size={16} color="var(--primary-color)" />
                   <span>github.com/hal4h</span>
                 </div>
@@ -65,9 +69,9 @@ const CV = () => {
             </div>
           </div>
 
-          {/* Experience */}
+          {/* Professional Experience */}
           <div>
-            <h3>Experience</h3>
+            <h3>Professional Experience</h3>
             
             <div className="project-card" style={{ margin: 0, marginBottom: '1rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
@@ -266,4 +270,4 @@ const CV = () => {
   );
 };
 
-export default CV; 
+export default Experience; 

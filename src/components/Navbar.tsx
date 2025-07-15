@@ -5,8 +5,8 @@ const Navbar = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: 'About' },
-    { path: '/cv', label: 'CV' },
+    { path: '/', label: 'Home' },
+    { path: '/experience', label: 'Experience' },
     { path: '/projects', label: 'Projects' },
     { path: '/misc', label: 'Misc' }
   ];
@@ -66,8 +66,9 @@ const Navbar = () => {
             <ThemeToggle />
           </li>
           <li>
-            <Link
-              to="/cv"
+            <a
+              href="/halah_resume.pdf"
+              download
               style={{
                 border: '1.5px solid var(--primary-color)',
                 color: 'var(--primary-color)',
@@ -84,7 +85,7 @@ const Navbar = () => {
               }}
             >
               Resume
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
