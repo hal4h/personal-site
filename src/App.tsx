@@ -2,15 +2,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import LoadingScreen from './components/LoadingScreen';
-import About from './pages/About';
 import Experience from './pages/CV';
 import Projects from './pages/Projects';
 import Misc from './pages/Misc';
 import './App.css';
 
 // Minimal HomeHero component
-import { Github, Linkedin, Mail, Download } from 'lucide-react';
-import { useCallback, useEffect, useState } from 'react';
+import { Github, Linkedin, Mail } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const HERO_TEXT = "Hi, my name is Halah Mhanni.";
@@ -19,9 +18,6 @@ function HomeHero() {
   const navigate = useNavigate();
   const [displayed, setDisplayed] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const handleDownload = useCallback(() => {
-    window.open('/halah_resume.pdf', '_blank');
-  }, []);
 
   useEffect(() => {
     let i = 0;

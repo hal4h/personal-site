@@ -1,24 +1,6 @@
-import { Camera, Heart, BookOpen, Coffee, Palette, Dumbbell } from 'lucide-react';
+
 
 const Misc = () => {
-  const hobbies = [
-    {
-      title: "Gym",
-      description: "Staying active and challenging myself physically is a big part of my routine. I love weightlifting and pushing my limits.",
-      icon: <Dumbbell size={24} />, // Use a dumbbell icon for gym
-      color: "var(--secondary-color)"
-    },
-    {
-      title: "Baking",
-      description: "Experimenting with new recipes and baking treats is my favorite way to relax and share joy with friends and family.",
-      icon: <BookOpen size={24} />, // Use BookOpen as a neutral icon for baking
-      color: "var(--primary-color)"
-    },
-    
-   
-   
-  ];
-
   const favoriteFilms = [
     {
       title: "Harakiri",
@@ -47,39 +29,6 @@ const Misc = () => {
       director: "Moustapha Akkad",
       description: "An epic story of resistance and dignity in the face of colonial oppression.",
       letterboxd: "https://letterboxd.com/film/lion-of-the-desert/"
-    }
-  ];
-
-  const photoGallery = [
-    {
-      title: "Urban Architecture",
-      description: "Exploring the geometric patterns and lines of cityscapes",
-      category: "Street Photography"
-    },
-    {
-      title: "Nature's Details",
-      description: "Close-up shots of natural textures and organic forms",
-      category: "Nature"
-    },
-    {
-      title: "Light & Shadow",
-      description: "Playing with contrast and dramatic lighting effects",
-      category: "Experimental"
-    },
-    {
-      title: "Human Moments",
-      description: "Candid shots capturing authentic human experiences",
-      category: "Portrait"
-    },
-    {
-      title: "Abstract Forms",
-      description: "Finding beauty in unexpected shapes and compositions",
-      category: "Abstract"
-    },
-    {
-      title: "Color Stories",
-      description: "Exploring the emotional impact of color in photography",
-      category: "Color"
     }
   ];
 
