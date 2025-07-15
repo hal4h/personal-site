@@ -24,33 +24,38 @@ const About = () => {
   }, []);
 
   return (
-    <div className="page hero-page" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingTop: '0' }}>
-      <section style={{ width: '100%', minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', maxWidth: 800, margin: '0 auto', padding: '0 2rem' }}>
-        <h1 style={{ fontFamily: 'Fira Mono, monospace', fontSize: '2.8rem', fontWeight: 700, color: 'var(--primary-color)', marginBottom: '1.5rem', letterSpacing: '-1px', whiteSpace: 'pre' }}>
-          {displayed}
-          <span style={{ opacity: showCursor ? 1 : 0, transition: 'opacity 0.2s', color: 'var(--accent-color)' }}>|</span>
-        </h1>
-        <p style={{ fontFamily: 'Fira Mono, monospace', fontSize: '1.1rem', color: 'var(--text-muted)', marginBottom: '2.5rem', maxWidth: 600 }}>
-          I’m a computer science student at the University of Manitoba passionate about building beautiful, scalable, and impactful software. Welcome to my portfolio.
-        </p>
-        <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginBottom: '2rem' }}>
-          <a href="https://github.com/hal4h" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)', fontSize: 28 }}><Github /></a>
-          <a href="https://linkedin.com/halah-mhanni" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--primary-color)', fontSize: 28 }}><Linkedin /></a>
-          <a href="mailto:halahmhanni4@icloud.com" aria-label="Email" style={{ color: 'var(--primary-color)', fontSize: 28 }}><Mail /></a>
+    <div className="page hero-page" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingTop: 0 }}>
+      <section style={{ width: '100%', minHeight: '60vh', display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'flex-start', maxWidth: 900, margin: '0 auto', padding: '0 2rem', gap: '2.5rem' }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <h1 style={{ fontFamily: 'Fira Mono, monospace', fontSize: '2.8rem', fontWeight: 700, color: 'var(--primary-color)', marginBottom: '1.5rem', letterSpacing: '-1px', whiteSpace: 'pre', textAlign: 'left' }}>
+            {displayed}
+            <span style={{ opacity: showCursor ? 1 : 0, transition: 'opacity 0.2s', color: 'var(--accent-color)' }}>|</span>
+          </h1>
+          <p style={{ fontFamily: 'Fira Mono, monospace', fontSize: '1.1rem', color: 'var(--text-muted)', marginBottom: '2.5rem', maxWidth: 600, textAlign: 'left' }}>
+            I’m a computer science student at the University of Manitoba passionate about building beautiful, scalable, and impactful software. Welcome to my portfolio.
+          </p>
+          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginBottom: '2rem' }}>
+            <a href="https://github.com/hal4h" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)', fontSize: 28 }}><Github /></a>
+            <a href="https://linkedin.com/halah-mhanni" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--primary-color)', fontSize: 28 }}><Linkedin /></a>
+            <a href="mailto:halahmhanni4@icloud.com" aria-label="Email" style={{ color: 'var(--primary-color)', fontSize: 28 }}><Mail /></a>
+          </div>
+        </div>
+        <div style={{ minWidth: 120, maxWidth: 180, flexShrink: 0, display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+          <img src="https://fauux.neocities.org/whoo.gif" alt="whoo gif" style={{ width: '100%', maxWidth: 180, borderRadius: 8, boxShadow: '0 2px 12px 0 rgba(0,0,0,0.07)' }} />
         </div>
       </section>
 
       {/* Rest of about/education/skills/experience as sections below, styled minimally */}
-      <section className="about-details" style={{ width: '100%', maxWidth: 800, margin: '0 auto', padding: '1.2rem', marginTop: '0.5rem' }}>
+      <section className="about-details" style={{ width: '100%', maxWidth: 800, margin: '0 auto', padding: '1.2rem', marginTop: '0.5rem', textAlign: 'left' }}>
         <h2 style={{ fontFamily: 'Fira Mono, monospace', fontWeight: 600, fontSize: '1.5rem', color: 'var(--accent-color)', marginBottom: '1.5rem' }}>About Me</h2>
         <p style={{ marginBottom: '1.2rem' }}>
-          I fell in love with problem solving and creativity early in high school, and never looked back since. My favorite class of all time was <b>Operating Systems</b>—it helps me every day when I program, since I truly understand how the computer works under the hood. I also loved <b>Automata Theory and Turing Machines</b>; learning about Turing completeness and formal languages has shaped the way I break down problems and approach algorithmic thinking.
+          My journey in computer science began in high school, where I took CS every single year. I was lucky to have an amazing teacher who encouraged me, challenged me, and made every class feel like an adventure in problem solving and creativity. Thanks to her support, I realized early on that CS was my life path—and I’ve never looked back.
         </p>
         <p style={{ marginBottom: '1.2rem' }}>
-          Currently exploring the intersection of software engineering, artificial intelligence, and user experience design. I believe in writing clean, efficient code and creating intuitive user interfaces that solve real-world problems. Every project is an opportunity to learn something new and push my boundaries further.
+          At university, I’ve loved diving deeper into the field. My favorite classes so far have been <b>Operating Systems</b>—which gave me a true understanding of how computers work under the hood—and <b>Automata Theory and Turing Machines</b>, which shaped the way I break down problems and approach algorithmic thinking. Every new course is a chance to learn something new and push my boundaries further.
         </p>
         <p style={{ marginBottom: '1.2rem' }}>
-          I’ve also been increasingly interested in the intersection of technology and finance—how software, data, and AI are transforming the financial world, from fintech startups to algorithmic trading and beyond.
+          I’m passionate about building beautiful, scalable, and impactful software, and I’m always excited to explore the intersection of technology, creativity, and real-world problem solving.
         </p>
       </section>
 

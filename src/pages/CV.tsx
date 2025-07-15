@@ -28,15 +28,15 @@ const Experience = () => {
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
                   <Mail size={16} color="var(--primary-color)" />
-                  <span>halahmhanni4@icloud.com</span>
+                  <a href="mailto:halahmhanni4@icloud.com" aria-label="Email" style={{ color: 'inherit', textDecoration: 'underline' }}>halahmhanni4@icloud.com</a>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
                   <Linkedin size={16} color="var(--primary-color)" />
-                  <span>linkedin.com/halah-mhanni</span>
+                  <a href="https://linkedin.com/in/halah-mhanni" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'inherit', textDecoration: 'underline' }}>linkedin.com/halah-mhanni</a>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
                   <Github size={16} color="var(--primary-color)" />
-                  <span>github.com/hal4h</span>
+                  <a href="https://github.com/hal4h" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'inherit', textDecoration: 'underline' }}>github.com/hal4h</a>
                 </div>
               </div>
             </div>
