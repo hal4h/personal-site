@@ -73,7 +73,7 @@ const About = () => {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <Linkedin size={16} color="var(--primary-color)" />
-            <a href="https://linkedin.com/halah-mhanni" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>linkedin.com/halah-mhanni</a>
+            <a href="https://linkedin.com/in/halah-mhanni" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>linkedin.com/halah-mhanni</a>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <Github size={16} color="var(--primary-color)" />
