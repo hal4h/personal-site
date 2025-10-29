@@ -1,4 +1,4 @@
-import { Download, Calendar, ExternalLink, Mail, Linkedin, Github } from 'lucide-react';
+import { Calendar, ExternalLink, Mail, Linkedin, Github } from 'lucide-react';
 
 const Experience = () => {
   return (
