@@ -59,7 +59,7 @@ function HomeHero() {
               border: '1px solid rgba(180,180,220,0.18)',
               transition: 'background 0.2s',
             }}>
-              <b>What I'm up to:</b> This summer, I'm interning as a Software Developer at Agriculture and Agri-Food Canada. I'm also building <button
+              {/* <b>What I'm up to:</b> This summer, I'm interning as a Software Developer at Agriculture and Agri-Food Canada. I'm also building <button
                 onClick={() => { navigate('/projects#signallens'); }}
                 style={{
                   background: 'rgba(200, 200, 255, 0.18)',
@@ -76,7 +76,7 @@ function HomeHero() {
                   transition: 'background 0.2s',
                 }}
               >Sentivest</button>, an AI-driven platform for real-time stock sentiment analysis. Check it out!
-            </div>
+            </div> */}
           </div>
           <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginBottom: '2rem' }}>
             <a href="https://github.com/hal4h" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)', fontSize: 28 }}><Github /></a>
