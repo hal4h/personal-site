@@ -5,16 +5,7 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const projects = [
-    // In Progress Project
-    {
-      title: "Sentivest- NewsTrader AI engine",
-      description: "AI-driven platform analyzing real-time stock sentiment using FinBERT, GPT-4, and social/news data. Provides correlation to price movements and behavioral trend alerts.",
-      technologies: ["Python", "AI/ML", "FinBERT", "GPT-4", "Financial Analysis", "Real-time Data"],
-      github: "https://github.com/hal4h/Sentivest",
-      live: null,
-      category: "In Progress",
-      icon: <Brain size={24} />
-    },
+    
     // Full Stack Projects
     {
       title: "Pomoverse: Your Study Companion",

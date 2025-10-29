@@ -65,28 +65,6 @@ const Navbar = () => {
           <li>
             <ThemeToggle />
           </li>
-          <li>
-            <a
-              href="/halah_resume.pdf"
-              download
-              style={{
-                border: '1.5px solid var(--primary-color)',
-                color: 'var(--primary-color)',
-                background: 'none',
-                borderRadius: '999px',
-                padding: '0.3rem 1.1rem',
-                fontFamily: 'Fira Mono, monospace',
-                fontWeight: 600,
-                fontSize: '1rem',
-                marginLeft: '0.5rem',
-                textDecoration: 'none',
-                transition: 'background 0.2s, color 0.2s',
-                boxShadow: 'none',
-              }}
-            >
-              Resume
-            </a>
-          </li>
         </ul>
       </div>
     </nav>

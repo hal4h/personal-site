@@ -6,13 +6,7 @@ const Experience = () => {
       <h1 className="page-title">Experience</h1>
 
       <div className="content-section">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-          <h2>Resume</h2>
-          <a href="/halah_resume.pdf" download className="btn">
-            <Download size={16} style={{ marginRight: '0.5rem' }} />
-            Download PDF
-          </a>
-        </div>
+        
         
         <div style={{ display: 'grid', gap: '2rem' }}>
           {/* Contact Information */}
@@ -49,7 +43,7 @@ const Experience = () => {
             <h3>Education</h3>
             <div className="project-card" style={{ margin: 0 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                <h3 style={{ color: 'var(--text-color)' }}>Bachelor of Computer Science (Honors) Statistics Minor</h3>
+                <h3 style={{ color: 'var(--text-color)' }}>Bachelor of Computer Science (Honors)</h3>
                 <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                   <Calendar size={14} style={{ marginRight: '0.25rem' }} />
                   Sep. 2022 – Dec. 2026
@@ -87,9 +81,24 @@ const Experience = () => {
                 Government of Canada, Agriculture and Agri-Food (AAFC) | Winnipeg, MB
               </p>
               <ul style={{ fontSize: '0.9rem', color: 'var(--text-muted)', paddingLeft: '1rem' }}>
-                <li>Engineered full-stack agricultural solutions using Spring Boot, Vue.js, and React, reducing data processing time by 30% through optimized API design.</li>
-                <li>Architected RESTful microservices using Spring Boot and Hibernate, handling 5,000+ daily requests and improving system scalability for Canada's agricultural data infrastructure.</li>
-                <li>Modernized legacy systems by integrating cloud-native technologies, reducing deployment times by 40%.</li>
+                <li>Engineered full-stack agricultural solutions using Spring Boot, Vue.js, and React.</li>
+              </ul>
+            </div>
+
+            <div className="project-card" style={{ margin: 0, marginBottom: '1rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                <h3 style={{ color: 'var(--text-color)' }}>Software Developer</h3>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                  <Calendar size={14} style={{ marginRight: '0.25rem' }} />
+                  May 2025 – Aug. 2025
+                </span>
+              </div>
+              <p style={{ color: 'var(--primary-color)', marginBottom: '0.5rem' }}>
+               Aspir| Remote
+              </p>
+              <ul style={{ fontSize: '0.9rem', color: 'var(--text-muted)', paddingLeft: '1rem' }}>
+                <li> Built an in-memory data store with transactions and versioning, letting users revert to earlier states while preserving
+                data consistency</li>
               </ul>
             </div>
 
@@ -106,14 +115,12 @@ const Experience = () => {
               </p>
               <ul style={{ fontSize: '0.9rem', color: 'var(--text-muted)', paddingLeft: '1rem' }}>
                 <li>Lead weekly sections with 15+ students through core Python programming concepts including algorithmic thinking, data structures, and computational problem-solving, with 100% of students achieving course competencies</li>
-                <li>Conducted in-depth code reviews for weekly submissions, providing tailored feedback on Python best practices and algorithm efficiency</li>
-                <li>Pioneered a peer programming initiative that reduced common syntax errors by 30% while fostering collaborative problem-solving skills</li>
               </ul>
             </div>
 
             <div className="project-card" style={{ margin: 0 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                <h3 style={{ color: 'var(--text-color)' }}>Game Development Student</h3>
+                <h3 style={{ color: 'var(--text-color)' }}> Software Developper - Develop at Ubisoft</h3>
                 <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                   <Calendar size={14} style={{ marginRight: '0.25rem' }} />
                   Oct 2023 – Apr 2024
@@ -124,7 +131,6 @@ const Experience = () => {
               </p>
               <ul style={{ fontSize: '0.9rem', color: 'var(--text-muted)', paddingLeft: '1rem' }}>
                 <li>Developed a 3D infinite scroller game in C++ using the Ubisoft API, featuring custom pathfinding AI, collision detection, and physics-based interactions.</li>
-                <li>Optimized the game loop to maintain consistent 60 FPS performance across multiple platforms.</li>
               </ul>
             </div>
           </div>
@@ -193,7 +199,7 @@ const Experience = () => {
                 <h3 style={{ color: 'var(--text-color)' }}>Member - University of Manitoba Robotics Team</h3>
                 <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                   <Calendar size={14} style={{ marginRight: '0.25rem' }} />
-                  2022 – Present
+                  2023 – Present
                 </span>
               </div>
               <p style={{ color: 'var(--primary-color)', marginBottom: '0.5rem' }}>
@@ -232,7 +238,7 @@ const Experience = () => {
             <div className="project-card" style={{ margin: 0, marginBottom: '1.2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '0.5rem' }}>
                 <span style={{ fontWeight: 600, color: 'var(--primary-color)' }}>Pomoverse: Your Study Companion</span>
-                <a href="https://github.com/yourusername/pomoverse" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)' }}><Github size={18} /></a>
+                <a href="https://github.com/hal4h/pomoverse" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)' }}><Github size={18} /></a>
                 <a href="https://pomo-verse.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Live Demo" style={{ color: 'var(--primary-color)' }}><ExternalLink size={18} /></a>
               </div>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', marginBottom: 0 }}>
@@ -251,7 +257,7 @@ const Experience = () => {
             <div className="project-card" style={{ margin: 0 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '0.5rem' }}>
                 <span style={{ fontWeight: 600, color: 'var(--primary-color)' }}>NBA Data CLI Application</span>
-                <a href="https://github.com/yourusername/3380-project" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)' }}><Github size={18} /></a>
+                <a href="https://github.com/hal4h/3380-project" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)' }}><Github size={18} /></a>
               </div>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', marginBottom: 0 }}>
                 Command-line interface for NBA data analysis with 30+ complex SQL queries. Provides comprehensive basketball statistics and analytics.

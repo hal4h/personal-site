@@ -32,7 +32,7 @@ const About = () => {
             <span style={{ opacity: showCursor ? 1 : 0, transition: 'opacity 0.2s', color: 'var(--accent-color)' }}>|</span>
           </h1>
           <p style={{ fontFamily: 'Fira Mono, monospace', fontSize: '1.1rem', color: 'var(--text-muted)', marginBottom: '2.5rem', maxWidth: 600, textAlign: 'left' }}>
-            I’m a computer science student at the University of Manitoba passionate about building beautiful, scalable, and impactful software. Welcome to my portfolio.
+            I’m a CS student at the UManitoba passionate about building beautiful, scalable, and impactful software. Welcome to my portfolio :D 
           </p>
           <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginBottom: '2rem' }}>
             <a href="https://github.com/hal4h" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--primary-color)', fontSize: 28 }}><Github /></a>
@@ -45,7 +45,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Rest of about/education/skills/experience as sections below, styled minimally */}
       <section className="about-details" style={{ width: '100%', maxWidth: 800, margin: '0 auto', padding: '1.2rem', marginTop: '0.5rem', textAlign: 'left' }}>
         <h2 style={{ fontFamily: 'Fira Mono, monospace', fontWeight: 600, fontSize: '1.5rem', color: 'var(--accent-color)', marginBottom: '1.5rem' }}>About Me</h2>
         <p style={{ marginBottom: '1.2rem' }}>
